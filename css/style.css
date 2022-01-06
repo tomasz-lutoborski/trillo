@@ -25,6 +25,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -45,6 +48,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 31.25em) {
+    .search {
+      order: 1;
+      flex: 0 0 100%; } }
   .search__button {
     background-color: var(--color-grey-light-2);
     border: none;
@@ -120,6 +127,10 @@ body {
   margin-top: 3.5rem;
   list-style: none;
   font-size: 1.4rem; }
+  @media only screen and (max-width: 56.75em) {
+    .side-nav {
+      display: flex;
+      margin: 0; } }
   .side-nav__link:link, .side-nav__link:visited {
     color: var(--color-grey-light-1);
     text-decoration: none;
@@ -128,15 +139,43 @@ body {
     padding: 1.5rem 1.5rem;
     position: relative;
     z-index: 10; }
+    @media only screen and (max-width: 56.75em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        display: flex;
+        justify-content: center;
+        align-items: center; } }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        flex-direction: column; } }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__link:link span, .side-nav__link:visited span {
+        text-align: center; } }
   .side-nav__icon {
     height: 1.75rem;
     width: 1.75rem;
     fill: currentColor;
     margin: 0 2rem; }
+    @media only screen and (max-width: 56.75em) {
+      .side-nav__icon {
+        margin: 0;
+        margin-right: 1rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__icon {
+        margin: 0;
+        margin-bottom: .7rem; } }
   .side-nav__item {
     position: relative; }
+    @media only screen and (max-width: 56.75em) {
+      .side-nav__item {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center; } }
     .side-nav__item:not(:last-child) {
       margin-bottom: 0.5rem; }
+      @media only screen and (max-width: 75em) {
+        .side-nav__item:not(:last-child) {
+          margin-bottom: 0; } }
     .side-nav__item::before {
       content: "";
       position: absolute;
@@ -158,6 +197,9 @@ body {
   color: var(--color-grey-light-4);
   padding: 2.5rem;
   text-align: center; }
+  @media only screen and (max-width: 56.75em) {
+    .legal {
+      display: none; } }
 
 .gallery {
   display: flex; }
@@ -175,6 +217,10 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__heading {
+        font-size: 1.8rem;
+        padding: 1rem 2rem; } }
   .overview__icon-location {
     margin-right: 1rem; }
   .overview__icon-location, .overview__icon-star {
@@ -270,6 +316,8 @@ body {
   align-items: center; }
   .recommend__count {
     margin-right: auto; }
+  .recommend__friends {
+    display: flex; }
   .recommend__photo {
     height: 4rem;
     width: 4rem;
@@ -277,7 +325,7 @@ body {
     box-sizing: content-box;
     border: 3px solid #fff; }
     .recommend__photo:not(:last-of-type) {
-      margin-right: -1.5rem; }
+      margin-right: -2rem; }
 
 .review {
   background-color: #fff;
@@ -368,6 +416,11 @@ body {
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark);
   min-height: 50rem; }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0;
+      max-width: 100%;
+      width: 100%; } }
 
 .header {
   height: 7rem;
@@ -377,9 +430,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 31.25em) {
+    .header {
+      flex-wrap: wrap;
+      height: 10rem; } }
 
 .content {
   display: flex; }
+  @media only screen and (max-width: 56.75em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
@@ -398,6 +458,12 @@ body {
   display: flex;
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line); }
+  @media only screen and (max-width: 56.75em) {
+    .detail {
+      padding: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column; } }
 
 .description {
   flex: 0 0 60%;
@@ -405,6 +471,14 @@ body {
   background-color: #fff;
   box-shadow: var(--shadow-light);
   padding: 3rem; }
+  @media only screen and (max-width: 56.75em) {
+    .description {
+      padding: 2rem;
+      margin-right: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .description {
+      margin: 0;
+      margin-bottom: 3rem; } }
 
 .user-reviews {
   flex: 1;
